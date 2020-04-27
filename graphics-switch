@@ -1,0 +1,14 @@
+#!/bin/bash
+currentGraphics="$(system76-power graphics)"
+
+if [ "$currentGraphics" == "nvidia" ]; then
+  nextGraphics="intel"
+else 
+  nextGraphics="nvidia"
+fi
+
+echo "Switching graphics driver to $nextGraphics..."
+sudo system76-power graphics $nextGraphics
+
+echo "Rebooting system"
+sudo systemctl reboot
