@@ -2,7 +2,7 @@
 currentGraphics="$(system76-power graphics)"
 
 if [ "$currentGraphics" == "nvidia" ]; then
-  nextGraphics="intel"
+  nextGraphics="integrated"
 else 
   nextGraphics="nvidia"
 fi
